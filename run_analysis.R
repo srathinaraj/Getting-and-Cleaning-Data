@@ -2,21 +2,21 @@
 ## 
 setwd("D:/RClass/UCI HAR Dataset")
 ## Reading all Training data sets
-trainData <- read.table("X_train.txt")
+trainData <- read.table("./train/X_train.txt")
 dim(trainData) 
 head(trainData)
 
-trainLabel <- read.table("y_train.txt")
+trainLabel <- read.table("./train/y_train.txt")
 table(trainLabel)
 
-trainSubject <- read.table("subject_train.txt")
+trainSubject <- read.table("./train/subject_train.txt")
 
 ## Reading all Test Data sets
-testData <- read.table("X_test.txt")
+testData <- read.table("./test/X_test.txt")
 dim(testData)
-testLabel <- read.table("y_test.txt") 
+testLabel <- read.table("./test/y_test.txt") 
 table(testLabel) 
-testSubject <- read.table("subject_test.txt")
+testSubject <- read.table("./test/subject_test.txt")
 ## Joining the Test Data and Training Data
 
 joinData <- rbind(trainData, testData)
